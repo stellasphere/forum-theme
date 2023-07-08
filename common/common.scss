@@ -1,0 +1,186 @@
+/* The outermost wrapper */
+#robo-navbar {
+    z-index: 1040;
+    position: sticky;
+    top: 0;
+    left: 0px;
+    right: 0;
+    margin-bottom: 12px;
+}
+/* is there a better way to detect PM pages and Topic pages from CSS? */
+body[class*="archetype-"] #robo-navbar {
+    position: fixed;
+}
+/* This inner wrapper makes sure the nav bar respects your forum's max width */
+span#robo-top-links {
+    display: block !important;
+    margin: 5px auto 0 auto;
+    max-width: 1110px;
+}
+/* The list of links itself */
+.robo-nav-link-container li {
+    display: inline-block;
+    float: left;
+}
+/* <a> tags are links, while the <b> tag is the current page */
+.robo-nav-link-container {
+    display: block;
+    overflow: hidden;
+    margin-left: 200px;
+    position: absolute;
+}
+
+.nav-link{
+    font-family: proxima-nova, sans-serif;
+    font-weight: 600;
+}
+
+.robo-nav-link-container a,
+.robo-nav-link-container b {
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    line-height: 48px;
+    font-size: 14px;
+    padding: 1em 1.25em;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.robo-nav-link-container a:hover,
+.robo-nav-link-container a:active,
+.robo-nav-link-container a:focus {
+    background: #A351FB;
+    color: #FFF;
+}
+/* small-screen mode */
+@media screen and (max-width: 1024px) {
+    /* the .js makes sure that "small-screen-mode" overrides "big-screen-mode */
+    .js div#robo-navbar {
+        display: none;
+        position: fixed;
+        margin-top: -1em;
+        margin-bottom: 1em;
+    }
+    .robo-nav-link-container {
+        display: none;
+        position: fixed;
+        margin-left: 0;
+    }
+}
+
+/* The hero image */
+.hero-image {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+// Footer
+
+.footer-basic {
+  padding:40px 0;
+  background-color: #2C005B;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color: white;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+.custom-search-banner-wrap h1{
+    color: white;
+}
+
+.custom-search-banner-wrap p{
+    color: white;
+}
+
+
+/* new topic button */
+
+#create-topic {
+  color: var(--secondary);
+  border: 2px solid var(--tertiary);
+  background: var(--tertiary);
+  transition: background .25s ease-out;
+  .d-icon {
+    color: var(--secondary);
+  }
+  &:hover,
+  &:focus {
+    background: var(--secondary);
+    color: var(--tertiary);
+    .d-icon {
+      color: var(--tertiary);
+    }
+  }
+  &.open-draft {
+    background: var(--primary-medium);
+    border: 2px solid var(--primary-medium);
+    transition: background .25s ease-out;
+    &:focus,
+    &:hover {
+      background: var(--secondary);
+      color: var(--primary-medium);
+      border: 2px solid var(--primary-medium);
+      .d-icon {
+        color: var(--primary-medium);
+      }
+    }
+  }
+}
