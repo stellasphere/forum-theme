@@ -18,12 +18,12 @@ span#robo-top-links {
     max-width: 1110px;
 }
 /* The list of links itself */
-.robo-nav-link-container li {
+.menu-buttons li {
     display: inline-block;
     float: left;
 }
 /* <a> tags are links, while the <b> tag is the current page */
-.robo-nav-link-container {
+.menu-buttons {
     display: block;
     overflow: hidden;
     margin-left: 200px;
@@ -35,8 +35,8 @@ span#robo-top-links {
     font-weight: 600;
 }
 
-.robo-nav-link-container a,
-.robo-nav-link-container b {
+.menu-buttons a,
+.menu-buttons b {
     color: #333;
     text-decoration: none;
     text-align: center;
@@ -45,9 +45,9 @@ span#robo-top-links {
     padding: 1em 1.25em;
     transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
-.robo-nav-link-container a:hover,
-.robo-nav-link-container a:active,
-.robo-nav-link-container a:focus {
+.menu-buttons a:hover,
+.menu-buttons a:active,
+.menu-buttons a:focus {
     background: #A351FB;
     color: #FFF;
 }
@@ -60,7 +60,7 @@ span#robo-top-links {
         margin-top: -1em;
         margin-bottom: 1em;
     }
-    .robo-nav-link-container {
+    .menu-buttons {
         display: none;
         position: fixed;
         margin-left: 0;
